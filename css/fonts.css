@@ -1,0 +1,30 @@
+@font-face {
+  font-family: ZtChablis;
+  font-weight: 700;
+  font-style: normal;
+  src: local("ZtChablis"),
+       url("../fonts/ZtChablisBold.woff2") format('woff2'),
+       url("../fonts/ZtChablisBold.woff") format('woff'),
+       url("../fonts/ZtChablisBold.eot") format('eot');
+  font-display: swap;
+}
+@font-face {
+  font-family: EuclidCircularB;
+  font-weight: 500;
+  font-style: normal;
+  src: local("EuclidCircularB"),
+       url("../fonts/Euclid Circular B Medium.woff2") format('woff2'),
+       url("../fonts/Euclid Circular B Medium.woff") format('woff'),
+       url("../fonts/Euclid Circular B Medium.eot") format('eot');
+  font-display: swap;
+}
+@font-face {
+  font-family: EuclidCircularB;
+  font-weight: 400;
+  font-style: normal;
+  src: local("EuclidCircularB"),
+       url("../fonts/Euclid Circular B Regular.woff2") format('woff2'),
+       url("../fonts/Euclid Circular B Regular.woff") format('woff'),
+       url("../fonts/Euclid Circular B Regular.eot") format('eot');
+  font-display: swap;
+}
