@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Swarovski</title>
@@ -14,21 +19,560 @@
 <body id="body">
   <div class="wrapper">
     <div class="overlay"></div>
-    <header class="header">
-		header
-    </header>
-    <main class="main">
-      <section class="main__about about" id="about">
-        main
-      </section>
-    </main>
-    <footer class="footer">
 
+    <header class="header">
+      <div class="header--full">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__logo">
+              <a href="/">
+                <img src="images/logos/header-logo-white.svg" class="logo logo-white" alt="Logo">
+                <img src="images/logos/header-logo-black.svg" class="logo logo-black" alt="Logo">
+              </a>
+            </div>
+
+            <div class="header__menu">
+              <nav class="header__nav">
+                <ul class="header__nav-list">
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Главная</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">О бренде</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Каталог</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Коллекции</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Магазины</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="header__burger--phone">
+                <a class="burger burger--follow" href="#">
+                  <img src="images/icons/burger.svg" alt="">
+                </a>
+              </div>
+
+              <div class="header__logo--phone">
+                <a href="/">
+                  <img src="images/logos/header-logo-white.svg" class="logo logo-white" alt="Logo">
+                  <img src="images/logos/header-logo-black.svg" class="logo logo-black" alt="Logo">
+                </a>
+              </div>
+
+              <div class="header__btn-box">
+                <div class="header__top-btn">
+                  <img src="images/icons/header-white-search-icon.svg" class="search-icon search-icon-white" alt="">
+                  <img src="images/icons/header-black-search-icon.svg" class="search-icon search-icon-black" alt="">
+                </div>
+                <div class="header__top-btn">
+                  <img src="images/icons/header-white-like-icon.svg" class="like-icon like-icon-white" alt="">
+                  <img src="images/icons/header-black-like-icon.svg" class="like-icon like-icon-black" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__search">
+            <form class="header__search-form">
+              <button type="submit" class="header__search-icon" aria-label="Искать">
+                <img src="images/icons/header-search-black-icon.svg" alt="">
+              </button>
+
+              <input type="text" placeholder="Поиск..." class="header__search-input">
+
+              <button type="reset" class="header__search-clear" aria-label="Очистить">
+                <img src="images/icons/cross-grey-icon.svg" alt="">
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="header--scroll">
+        <div class="container">
+          <div class="header__inner--scroll">
+
+            <div class="header__burger--phone">
+              <a class="burger burger--follow" href="#">
+                <img src="images/icons/burger-black.svg" alt="">
+              </a>
+            </div>
+
+            <div class="header__logo--scroll">
+              <a href="/">
+                <img src="images/logos/header-logo-black.svg" class="logo-black--scroll" alt="Logo">
+              </a>
+            </div>
+
+            <div class="header__menu--scroll">
+              <nav class="header__nav--scroll">
+                <ul class="header__nav-list--scroll">
+                  <li class="header__nav-item--scroll">
+                    <a class="header__nav-link--scroll" href="#">Главная</a>
+                  </li>
+                  <li class="header__nav-item--scroll">
+                    <a class="header__nav-link--scroll" href="#">О бренде</a>
+                  </li>
+                  <li class="header__nav-item--scroll">
+                    <a class="header__nav-link--scroll" href="#">Каталог</a>
+                  </li>
+                  <li class="header__nav-item--scroll">
+                    <a class="header__nav-link--scroll" href="#">Коллекции</a>
+                  </li>
+                  <li class="header__nav-item--scroll">
+                    <a class="header__nav-link--scroll" href="#">Магазины</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="header__btn-box--scroll">
+                <div class="header__top-btn--scroll">
+                  <img src="images/icons/header-black-search-icon.svg" class="search-icon--scroll" alt="">
+                </div>
+                <div class="header__top-btn--scroll">
+                  <img src="images/icons/header-black-like-icon.svg" class="like-icon--scroll" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </header>
+
+
+    <main class="main">
+      <section class="main__banner banner" id="banner">
+        <div class="container">
+          <div class="banner__inner">
+            <div class="banner__content">
+              <div class="banner__title">
+                <h2 class="heading__title">Весна-Лето 2025</h2>
+              </div>
+              <div class="banner__text">
+                <p class="banner__paragraph">Шагните в наш магический мир, где сияет преобразующая сила кристалла.</p>
+              </div>
+              <div class="banner__btn-box">
+                <a class="banner__btn button" href="#">Каталог</a>
+                <a class="banner__btn button button--empty" href="#">Узнать больше</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="main__brand brand">
+        <div class="container">
+          <div class="brand__inner">
+            <div class="brand__title">
+              <h2 class="heading__title">Мастера света с 1895 года</h2>
+            </div>
+            <div class="brand__text">
+              <p class="brand__paragraph">
+                Алмазы SWAROVSKI — это высококачественные кристаллы, которые создаются с использованием уникальной
+                технологии огранки. Бренд Swarovski, основанный в 1895 году Даниэлем Swarovski, прославился на весь мир
+                благодаря
+                своему мастерству в обработке стеклянных кристаллов и создании изысканных ювелирных изделий.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__gallery gallery">
+        <div class="container">
+          <div class="gallery__inner">
+
+            <div class="slider gallery__slider">
+              <div class="slider__item gallery__item">
+                <img src="images/bg-banner.jpg" alt="">
+              </div>
+              <div class="slider__item gallery__item">
+                <img src="images/bg-banner.jpg" alt="">
+              </div>
+              <div class="slider__item gallery__item">
+                <img src="images/bg-banner.jpg" alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="main__popular popular">
+        <div class="container">
+          <div class="popular__inner">
+
+            <div class="popular__title">
+              <h2 class="heading__title">Популярные товары</h2>
+            </div>
+
+            <div class="swiper product-swiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card-like">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M3.25 8.66699C3.24654 7.42991 3.68649 6.26739 4.49023 5.36035L4.65625 5.18262C5.56018 4.25726 6.75862 3.75 8.0293 3.75C9.22341 3.75009 10.3547 4.19891 11.2402 5.02148L11.4141 5.19043L11.9697 5.75977L12.5068 6.30859L13.043 5.75977L13.5898 5.19922C14.498 4.26961 15.6961 3.76279 16.9707 3.7627C18.1668 3.7627 19.2911 4.20531 20.1748 5.02637L20.3477 5.19531C21.1987 6.06654 21.6901 7.20518 21.7451 8.43262L21.75 8.67969V8.68164C21.75 10.0023 21.2489 11.2368 20.3408 12.167L12.4951 20.168L4.66504 12.1504C3.75488 11.2186 3.25007 9.98798 3.25 8.66895V8.66699Z"
+                          stroke="black" stroke-width="1.5" />
+                      </svg>
+                    </div>
+                    <div class="product-image"><img src="images/product.jpg" alt=""></div>
+                    <div class="product-name">Сережки из белого золота с аметистами и рубинами</div>
+                    <div class="product-price">8 000 000 ₽</div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card-like">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M3.25 8.66699C3.24654 7.42991 3.68649 6.26739 4.49023 5.36035L4.65625 5.18262C5.56018 4.25726 6.75862 3.75 8.0293 3.75C9.22341 3.75009 10.3547 4.19891 11.2402 5.02148L11.4141 5.19043L11.9697 5.75977L12.5068 6.30859L13.043 5.75977L13.5898 5.19922C14.498 4.26961 15.6961 3.76279 16.9707 3.7627C18.1668 3.7627 19.2911 4.20531 20.1748 5.02637L20.3477 5.19531C21.1987 6.06654 21.6901 7.20518 21.7451 8.43262L21.75 8.67969V8.68164C21.75 10.0023 21.2489 11.2368 20.3408 12.167L12.4951 20.168L4.66504 12.1504C3.75488 11.2186 3.25007 9.98798 3.25 8.66895V8.66699Z"
+                          stroke="black" stroke-width="1.5" />
+                      </svg>
+                    </div>
+                    <div class="product-image"><img src="images/product.jpg" alt=""></div>
+                    <div class="product-name">Сережки из белого золота с аметистами и рубинами</div>
+                    <div class="product-price">8 000 000 ₽</div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card-like">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M3.25 8.66699C3.24654 7.42991 3.68649 6.26739 4.49023 5.36035L4.65625 5.18262C5.56018 4.25726 6.75862 3.75 8.0293 3.75C9.22341 3.75009 10.3547 4.19891 11.2402 5.02148L11.4141 5.19043L11.9697 5.75977L12.5068 6.30859L13.043 5.75977L13.5898 5.19922C14.498 4.26961 15.6961 3.76279 16.9707 3.7627C18.1668 3.7627 19.2911 4.20531 20.1748 5.02637L20.3477 5.19531C21.1987 6.06654 21.6901 7.20518 21.7451 8.43262L21.75 8.67969V8.68164C21.75 10.0023 21.2489 11.2368 20.3408 12.167L12.4951 20.168L4.66504 12.1504C3.75488 11.2186 3.25007 9.98798 3.25 8.66895V8.66699Z"
+                          stroke="black" stroke-width="1.5" />
+                      </svg>
+                    </div>
+                    <div class="product-image"><img src="images/product.jpg" alt=""></div>
+                    <div class="product-name">Сережки из белого золота с аметистами и рубинами</div>
+                    <div class="product-price">8 000 000 ₽</div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card-like">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M3.25 8.66699C3.24654 7.42991 3.68649 6.26739 4.49023 5.36035L4.65625 5.18262C5.56018 4.25726 6.75862 3.75 8.0293 3.75C9.22341 3.75009 10.3547 4.19891 11.2402 5.02148L11.4141 5.19043L11.9697 5.75977L12.5068 6.30859L13.043 5.75977L13.5898 5.19922C14.498 4.26961 15.6961 3.76279 16.9707 3.7627C18.1668 3.7627 19.2911 4.20531 20.1748 5.02637L20.3477 5.19531C21.1987 6.06654 21.6901 7.20518 21.7451 8.43262L21.75 8.67969V8.68164C21.75 10.0023 21.2489 11.2368 20.3408 12.167L12.4951 20.168L4.66504 12.1504C3.75488 11.2186 3.25007 9.98798 3.25 8.66895V8.66699Z"
+                          stroke="black" stroke-width="1.5" />
+                      </svg>
+                    </div>
+                    <div class="product-image"><img src="images/product.jpg" alt=""></div>
+                    <div class="product-name">Сережки из белого золота с аметистами и рубинами</div>
+                    <div class="product-price">8 000 000 ₽</div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <div class="product-card-like">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M3.25 8.66699C3.24654 7.42991 3.68649 6.26739 4.49023 5.36035L4.65625 5.18262C5.56018 4.25726 6.75862 3.75 8.0293 3.75C9.22341 3.75009 10.3547 4.19891 11.2402 5.02148L11.4141 5.19043L11.9697 5.75977L12.5068 6.30859L13.043 5.75977L13.5898 5.19922C14.498 4.26961 15.6961 3.76279 16.9707 3.7627C18.1668 3.7627 19.2911 4.20531 20.1748 5.02637L20.3477 5.19531C21.1987 6.06654 21.6901 7.20518 21.7451 8.43262L21.75 8.67969V8.68164C21.75 10.0023 21.2489 11.2368 20.3408 12.167L12.4951 20.168L4.66504 12.1504C3.75488 11.2186 3.25007 9.98798 3.25 8.66895V8.66699Z"
+                          stroke="black" stroke-width="1.5" />
+                      </svg>
+                    </div>
+                    <div class="product-image"><img src="images/product.jpg" alt=""></div>
+                    <div class="product-name">Сережки из белого золота с аметистами и рубинами</div>
+                    <div class="product-price">8 000 000 ₽</div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="autoplay-progress">
+                <span class="progress-bar"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="main__collections collections">
+        <div class="container">
+          <div class="collections__inner">
+
+            <div class="collections__title">
+              <h2 class="heading__title">Коллекции</h2>
+            </div>
+
+            <div class="collections__list">
+
+              <div class="collections__item">
+                <div class="collections__item-content">
+
+                  <div class="collections__item-content-inner">
+                    <div class="collections__item-title">
+                      Культовый гламур
+                    </div>
+                    <div class="collections__item-text">
+                      Мир цвета и света Swarovski оживает с Арианой Гранде, воплощающей суть нашей легендарной семьи
+                      Millenia. Свежие сиреневые тона в сочетании с ее яркой звездной силой создают высококлассную
+                      модную
+                      фантазию.
+                    </div>
+                    <div class="collections__item-btn">
+                      <a href="#" class="collections__item-link">Посмотреть</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="collections__item-img">
+                  <img src="images/collections/1.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="collections__item collections__item--right">
+                <div class="collections__item-img">
+                  <img src="images/collections/3.jpg" alt="">
+                </div>
+                <div class="collections__item-content">
+                  <div class="collections__item-content-inner collections__item-content-inner--right">
+                    <div class="collections__item-title">
+                      Сила цветов
+                    </div>
+                    <div class="collections__item-text">
+                      Чувственный. Поэтично. Прохладный. Ариана Гранде расцветает в весенне-летнем сезоне 2025 года,
+                      воплощая собой яркую романтику в Идиллии. Нежные мотивы флоры и фауны, созданные с удивительной
+                      живостью, придают ей мягкое сияние.
+                    </div>
+                    <div class="collections__item-btn">
+                      <a href="#" class="collections__item-link">Посмотреть</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="collections__item">
+                <div class="collections__item-content">
+
+                  <div class="collections__item-content-inner">
+                    <div class="collections__item-title">
+                      Коллекция Гема
+                    </div>
+                    <div class="collections__item-text">
+                      Погрузитесь в прекрасный сад цветущих кристаллов. Gema предлагает сияющие украшения с нежными
+                      листьями и яркими цветами, которые раскрываются на ваших глазах, а также яркие продукты,
+                      вдохновленные этой линией.
+                    </div>
+                    <div class="collections__item-btn">
+                      <a href="#" class="collections__item-link">Посмотреть</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="collections__item-img">
+                  <img src="images/collections/2.jpg" alt="">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="collections__bottom">
+              <a class="collections__btn button" href="#">Все коллекции</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__categories categories">
+        <div class="container">
+          <div class="categories__inner">
+            <div class="categories__list">
+
+              <div class="categories__item">
+                <div class="categories__item-img">
+                  <img src="images/categories/1.jpg" alt="">
+                </div>
+                <div class="categories__item-name">Украшения</div>
+              </div>
+
+              <div class="categories__item">
+                <div class="categories__item-img">
+                  <img src="images/categories/2.jpg" alt="">
+                </div>
+                <div class="categories__item-name">Часы</div>
+              </div>
+
+              <div class="categories__item">
+                <div class="categories__item-img">
+                  <img src="images/categories/3.jpg" alt="">
+                </div>
+                <div class="categories__item-name">Сувениры</div>
+              </div>
+
+              <div class="categories__item">
+                <div class="categories__item-img">
+                  <img src="images/categories/4.jpg" alt="">
+                </div>
+                <div class="categories__item-name">Аксессуары</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <section class="main__questions questions">
+        <div class="container">
+          <div class="questions__inner">
+            <div class="questions__list">
+
+              <div class="questions__item">
+                <div class="questions__img">
+                  <img src="images/questions/1.svg" alt="">
+                </div>
+                <div class="questions__title">
+                  Чей это бренд?
+                </div>
+                <div class="questions__text">
+                  Алмазы SWAROVSKI — это высококачественные кристаллы, которые создаются с использованием уникальной
+                  технологии огранки. Бренд Swarovski, основанный в 1895 году Даниэлем Swarovski.
+                </div>
+              </div>
+
+              <div class="questions__item">
+                <div class="questions__img">
+                  <img src="images/questions/2.svg" alt="">
+                </div>
+                <div class="questions__title">
+                  Как я могу убедиться в качестве?
+                </div>
+                <div class="questions__text">
+                  Алмазы SWAROVSKI — это высококачественные кристаллы, которые создаются с использованием уникальной
+                  технологии огранки.
+                </div>
+              </div>
+
+              <div class="questions__item">
+                <div class="questions__img">
+                  <img src="images/questions/3.svg" alt="">
+                </div>
+                <div class="questions__title">
+                  Есть ли гарантия<br> на изделия?
+                </div>
+                <div class="questions__text">
+                  Алмазы SWAROVSKI — это высококачественные кристаллы, которые создаются с использованием уникальной
+                  технологии огранки.
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__to-catalog to-catalog">
+        <div class="container">
+          <div class="to-catalog__inner">
+            <div class="to-catalog__text">
+              <div class="to-catalog__title">Искусство сиять со Swarovski</div>
+              <div class="to-catalog__paragraph">
+                Откройте мир безупречной красоты и роскоши вместе с кристаллами Swarovski! Наслаждайтесь изысканным
+                блеском ювелирных украшений, блистательных аксессуаров и эксклюзивных подарков, созданных с
+                непревзойденным мастерством австрийских мастеров.
+              </div>
+              <div class="to-catalog__bottom">
+                <a class="to-catalog__btn button" href="#">В каталог</a>
+              </div>
+            </div>
+
+            <div class="to-catalog__swan-img">
+              <img src="images/swan.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__top">
+
+            <div class="footer__top-inner">
+              <div class="footer__top-col">
+                <h3 class="footer__top-title footer__top-title--slide">Коллекции</h3>
+                <ul class="footer__top-list">
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">The Best Accessories for Your Black Dress</a>
+                  </li>
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">A High note</a>
+                  </li>
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">Astrology Gifts & Zodiac Accessories</a>
+                  </li>
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">Ocean-Inspired Jewelry</a>
+                  </li>
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">Eternal Sunshine</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__top-col">
+                <h3 class="footer__top-title footer__top-title--slide">Навигация</h3>
+                <ul class="footer__top-list">
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">Главная</a>
+                  </li>
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">О бренде</a>
+                  </li>
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">Каталог</a>
+                  </li>
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">FAQ</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__top-col">
+                <h3 class="footer__top-title footer__top-title--slide">Магазины</h3>
+                <ul class="footer__top-list">
+                  <li class="footer__top-item">
+                    <a class="footer__item-link" href="#">Магазины</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <hr>
+          </div>
+
+
+          <div class="footer__bottom">
+            <img src="images/logos/footer-logo-white.svg" alt="">
+          </div>
+
+        </div>
+      </div>
     </footer>
+
   </div>
 </body>
 
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
 
 </html>
