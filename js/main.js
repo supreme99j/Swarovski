@@ -10,6 +10,20 @@ $(".gallery__slider").slick({
 const swiper = new Swiper(".product-swiper", {
   slidesPerView: 4,
   spaceBetween: 24,
+  breakpoints: {
+    0: {
+      slidesPerView: 2, 
+    },
+    600: {
+      slidesPerView: 2,
+    },
+    800: {
+      slidesPerView: 3,
+    },
+    1300: {
+      slidesPerView: 4,
+    },
+  },
   on: {
     init(swiper) {
       updateProgress(swiper);
@@ -81,6 +95,25 @@ window.addEventListener('scroll', toggleHeaderByScroll);
 document.addEventListener('DOMContentLoaded', toggleHeaderByScroll);
 
 /* ---------------------------------- */
+
+$('.burger, .overlay, .menu__mobile-off').on('click', function (e) {
+  e.preventDefault()
+  $('.menu__mobile').toggleClass('menu__mobile--open')
+  $('.overlay').toggleClass('overlay--show')
+})
+
+/* ---------------------------------- */
+
+$('.menu__mobile-link').on('click', function (e) {
+  e.preventDefault()
+  $('.menu__mobile-submenu').toggleClass('menu__mobile-submenu--hidden')
+  $('.menu__mobile-arrow').toggleClass('menu__mobile-arrow--hidden')
+})
+
+/* ---------------------------------- */
+
+
+
 
 
 
