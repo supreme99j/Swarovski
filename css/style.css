@@ -21,7 +21,7 @@ h2 {
 }
 
 .container {
-  max-width: 1440px;
+  /* max-width: 1440px; */
   padding: 0;
   margin: 0 auto;
   height: 100%;
@@ -40,10 +40,10 @@ h2 {
   background: #000;
   white-space: nowrap;
   transition: .3s;
+  border: 1px solid #000;
 }
 
 .button--empty {
-  line-height: 48px;
   background-color: transparent;
   color: #000;
   border: 1px solid #000;
@@ -92,6 +92,7 @@ h2 {
 }
 
 .header__logo--phone, .header__burger--phone {
+  z-index: 200;
   display: none;
 }
 
@@ -151,6 +152,7 @@ h2 {
   height: 24px;
   width: 25px;
   cursor: pointer;
+  z-index: 200;
 }
 
 
@@ -228,6 +230,7 @@ h2 {
   display: flex;
   margin-left: auto;
   align-items: center;
+  z-index: 200;
 }
 
 .header__top-btn--scroll {
@@ -302,6 +305,7 @@ h2 {
   opacity: 0;
   transform: translateY(-100px);
   transition: 0.3s all;
+  display: none;
 }
 
 .header__search-form {
@@ -348,10 +352,25 @@ h2 {
   right: 14px;
 }
 
+/*
 .header:hover .header__search {
   background: #fff;
   opacity: 1;
   transform: translateY(0);
+} */
+
+.header:hover .header__search {
+  display: block;
+}
+
+.header__search--show {
+  background: #fff;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header__search--scroll {
+  display: block;
 }
 
 /* ============================== BANNER ============================== */
@@ -366,7 +385,7 @@ h2 {
 .container {}
 
 .banner__inner {
-  background-image: url(/images/bg-banner.jpg);
+  background: url(/images/bg-banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1398,6 +1417,7 @@ h2 {
   }
 
   .header__inner--scroll {
+    z-index: 200;
     padding: 16px;
   }
 

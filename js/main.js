@@ -104,15 +104,52 @@ $('.burger, .overlay, .menu__mobile-off').on('click', function (e) {
 
 /* ---------------------------------- */
 
-$('.menu__mobile-link').on('click', function (e) {
+$('#menu__mobile-link-1').on('click', function (e) {
   e.preventDefault()
-  $('.menu__mobile-submenu').toggleClass('menu__mobile-submenu--hidden')
-  $('.menu__mobile-arrow').toggleClass('menu__mobile-arrow--hidden')
+  $('#menu__mobile-submenu-1').toggleClass('menu__mobile-submenu--hidden')
+  $('#menu__mobile-arrow-down-1').toggleClass('menu__mobile-arrow--hidden')
+  $('#menu__mobile-arrow-up-1').toggleClass('menu__mobile-arrow--hidden')
 })
 
 /* ---------------------------------- */
 
+document.querySelectorAll('.show-search-form').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    document.querySelectorAll('.header__search').forEach(el => {
+      el.classList.toggle('header__search--show');
+    });
+  });
+});
 
+/* ---------------------------------- */
+
+const inputs = document.querySelectorAll('.header__search-input');
+
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    inputs.forEach(otherInput => {
+      if (otherInput !== input) {
+        otherInput.value = input.value;
+      }
+    });
+  });
+});
+
+/* ---------------------------------- */
+
+const progressBar = document.querySelector('.autoplay-progress');
+
+progressBar.addEventListener('click', (e) => {
+  const rect = progressBar.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const clickRatio = clickX / rect.width;
+  const totalSlides = swiper.slides.length;
+
+  const targetIndex = Math.floor(clickRatio * totalSlides);
+  swiper.slideTo(targetIndex);
+});
+
+/* ---------------------------------- */
 
 
 
