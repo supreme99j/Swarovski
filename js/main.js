@@ -137,7 +137,7 @@ inputs.forEach(input => {
 
 /* ---------------------------------- */
 
-const progressBar = document.querySelector('.autoplay-progress');
+/* const progressBar = document.querySelector('.autoplay-progress');
 
 progressBar.addEventListener('click', (e) => {
   const rect = progressBar.getBoundingClientRect();
@@ -147,7 +147,87 @@ progressBar.addEventListener('click', (e) => {
 
   const targetIndex = Math.floor(clickRatio * totalSlides);
   swiper.slideTo(targetIndex);
+}); */
+
+
+
+const scrollTrack = document.querySelector('.scroll-track');
+const scrollThumb = document.querySelector('.scroll-thumb');
+const totalSlides = swiper.slides.length;
+
+scrollThumb.style.setProperty('--slides-count', totalSlides);
+
+let isDragging = false;
+let startX = 0;
+let thumbStartX = 0;
+
+scrollThumb.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startX = e.clientX;
+  thumbStartX = getCurrentThumbPosition();
+  e.preventDefault();
+  e.stopPropagation();
 });
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  
+  const rect = scrollTrack.getBoundingClientRect();
+  const dragDistance = e.clientX - startX;
+  let newThumbPosition = thumbStartX + dragDistance;
+  
+  const maxPosition = rect.width - scrollThumb.offsetWidth;
+  newThumbPosition = Math.max(0, Math.min(newThumbPosition, maxPosition));
+  
+  const positionRatio = newThumbPosition / maxPosition;
+  const targetIndex = Math.floor(positionRatio * (totalSlides - 1));
+  
+  scrollThumb.style.transform = `translateX(${newThumbPosition}px)`;
+  swiper.slideTo(targetIndex);
+});
+
+document.addEventListener('mouseup', () => {
+  if (isDragging) {
+    isDragging = false;
+    updateThumbPosition(swiper.activeIndex);
+  }
+});
+
+function getCurrentThumbPosition() {
+  const transform = window.getComputedStyle(scrollThumb).getPropertyValue('transform');
+  if (transform === 'none') return 0;
+  const matrix = transform.match(/^matrix\((.+)\)$/);
+  return matrix ? parseFloat(matrix[1].split(', ')[4]) : 0;
+}
+
+scrollTrack.addEventListener('click', (e) => {
+  if (isDragging) return;
+  
+  const rect = scrollTrack.getBoundingClientRect();
+  let clickX = e.clientX - rect.left - (scrollThumb.offsetWidth / 2);
+  
+  const maxPosition = rect.width - scrollThumb.offsetWidth;
+  clickX = Math.max(0, Math.min(clickX, maxPosition));
+  
+  const positionRatio = clickX / maxPosition;
+  const targetIndex = Math.floor(positionRatio * (totalSlides - 1));
+  
+  swiper.slideTo(targetIndex);
+  updateThumbPosition(targetIndex);
+});
+
+swiper.on('slideChange', () => {
+  if (!isDragging) {
+    updateThumbPosition(swiper.activeIndex);
+  }
+});
+
+function updateThumbPosition(index) {
+  const rect = scrollTrack.getBoundingClientRect();
+  const maxPosition = rect.width - scrollThumb.offsetWidth;
+  const newPosition = (index / (totalSlides - 1)) * maxPosition;
+  scrollThumb.style.transform = `translateX(${newPosition}px)`;
+}
 
 /* ---------------------------------- */
 
