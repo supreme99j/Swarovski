@@ -387,7 +387,7 @@ h2 {
 .container {}
 
 .banner__inner {
-  background: url(/images/bg-banner.jpg);
+  background: url(../images/bg-banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
