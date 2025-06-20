@@ -124,6 +124,7 @@ h2 {
   white-space: nowrap;
   position: relative;
   text-decoration: none;
+  z-index: 1000;
 }
 
 .header__nav-link::after {
@@ -209,6 +210,7 @@ h2 {
   white-space: nowrap;
   position: relative;
   text-decoration: none;
+  z-index: 1000;
 }
 
 .header__nav-link--scroll::after {
@@ -380,18 +382,20 @@ h2 {
 
 .main {}
 
-.main__banner {}
-
-.banner {}
-
-.container {}
-
-.banner__inner {
+.main__banner {
   background: url(../images/bg-banner.jpg);
+  height: 720px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 720px;
+}
+
+.banner {}
+
+
+.banner__inner {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .banner__content {
@@ -453,7 +457,10 @@ h2 {
 
 .gallery {}
 
-.gallery__inner {}
+.gallery__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 .gallery__slider {}
 
@@ -546,6 +553,8 @@ h2 {
   width: 100%;
   max-width: 1280px;
   padding-bottom: 100px;
+  padding-bottom: 50px;
+  overflow: unset;
 }
 
 .swiper-slide {
@@ -884,11 +893,14 @@ h2 {
 /* ============================== FOOTER ============================== */
 /* ============================== FOOTER ============================== */
 
-.footer {}
-
-.footer__inner {
+.footer {
   background: #000;
   min-height: 558px;
+}
+
+.footer__inner {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .footer__top {
@@ -1535,10 +1547,6 @@ h2 {
   .crossed-out-price {
     display: block;
     font-size: 12px;
-  }
-
-  .swiper {
-    padding-bottom: 50px;
   }
 
   /* ----------------------------------- */
