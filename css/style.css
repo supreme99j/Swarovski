@@ -553,7 +553,6 @@ h2 {
   width: 100%;
   max-width: 1280px;
   padding-bottom: 100px;
-  padding-bottom: 50px;
   overflow: unset;
 }
 
@@ -848,10 +847,15 @@ h2 {
 /* ============================== TO-CATALOG ============================== */
 /* ============================== TO-CATALOG ============================== */
 
-.to-catalog__inner {
+.main__to-catalog {
   background: #8dbaed;
+}
+
+.to-catalog__inner {
   padding: 60px;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .to-catalog__text {
@@ -884,6 +888,7 @@ h2 {
   position: absolute;
   top: 58px;
   right: 63px;
+  /* 16%; */
 }
 
 .to-catalog__swan-img img {
@@ -1050,6 +1055,11 @@ h2 {
     margin-left: 80px;
     margin-right: 0;
   }
+
+  .to-catalog__swan-img {
+    right: 63px;
+  }
+
 }
 
 
