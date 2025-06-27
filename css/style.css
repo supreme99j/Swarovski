@@ -852,7 +852,7 @@ h2 {
 }
 
 .to-catalog__inner {
-  padding: 60px;
+  padding: 79px 60px 78px 60px;
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
@@ -886,7 +886,7 @@ h2 {
   width: 230px;
   height: 290px;
   position: absolute;
-  top: 58px;
+  top: 79px;
   right: 63px;
   /* 16%; */
 }
